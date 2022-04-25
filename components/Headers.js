@@ -3,14 +3,21 @@ import { BellIcon, ChatIcon, ChevronDownIcon, HomeIcon, ViewGridIcon } from "@he
 import { SearchIcon , FlagIcon , PlayIcon, ShoppingCartIcon, UserGroupIcon} from "@heroicons/react/outline"
 import HeaderIcon from "../components/HeaderIcon"
 import Image from 'next/image'
+import { signOut, useSession } from 'next-auth/react'
 
 const Headers = () => {
+
+  const {data: session} = useSession()
   return (
     <div className='sticky top-0 z-50 bg-white flex items-center p-2 lg:px-5 shadow-md '>
       {/* left */}
       <div className='flex items-center'>
         <div>
-          <p>f</p>
+          <Image
+          src='/image/fb.png'
+          height={50}
+          width={50}
+          />
         </div>
         <div className='flex bg-slate-200 rounded-full p-2 ml-2 items-center space-x-2'>
           <SearchIcon className='h-6 text-gray-500' />
@@ -30,7 +37,19 @@ const Headers = () => {
       {/* right */}
       <div className='flex items-center sm:space-x-2 justify-end'>
         {/* profile */}
-        <p className='whitespace-nowrap font-semibold pr-3'>exil</p>
+        <Image 
+        onClick={signOut}
+        className="rounded-full cursor-pointer"
+        // src={session.user.image}
+        src="/image/Solar.jpg"
+        width={40}
+        height={40}
+        layout='fixed'
+        />
+        <p className='hidden sm:block  whitespace-nowrap font-semibold pr-3'>
+          {/* {session.user.name} */}
+          exil
+        </p>
         <ViewGridIcon className='icons'/>
         <ChatIcon className='icons'/>
         <BellIcon className='icons'/>

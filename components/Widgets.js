@@ -4,19 +4,19 @@ import Contact from "../components/Contact"
 
 const test = [
     {
-        name: "first",
+        name: "Lisa",
         src: "/image/Solar.jpg"
     },
     {
-        name: "second",
+        name: "Antonio",
         src: "/image/Solar.jpg"
     },
     {
-        name: "three",
+        name: "Brad",
         src: "/image/Solar.jpg"
     },
     {
-        name: "four",
+        name: "Miller",
         src: "/image/Solar.jpg"
     }
 ]

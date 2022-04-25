@@ -3,11 +3,11 @@ import Post from "../components/Post"
 
 const test = [
     {
-        name: "first",
+        name: "Jack",
         src: "/image/Solar.jpg"
     },
     {
-        name: "second",
+        name: "Lisa",
         src: "/image/Solar.jpg"
     }
 ]
@@ -16,7 +16,7 @@ const Posts = () => {
     return (
         <div>
             {test.map((data, index ) => (
-                <Post data={data} index={index} postImage={true} />
+                <Post data={data} key={index} postImage={true} />
             ))}
         </div>
     )

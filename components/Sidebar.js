@@ -6,9 +6,10 @@ import { CalendarIcon , ClockIcon , DesktopComputerIcon , UserIcon } from '@hero
 
 
 const Sidebar = () => {
+    const {data: session} = useSession()
     return (
         <div className='p-2 mt-5 w-20 md:w-48 xl:min-w-min'>
-            <SidebarRow Icon={UserIcon} title="friends"/>
+            {/* <SidebarRow src={session.user.image} Icon={UserIcon} title={session.user.name}/> */}
             <SidebarRow Icon={UserIcon} title="friends"/>
             <SidebarRow Icon={UserGroupIcon} title="Groups"/>
             <SidebarRow Icon={ShoppingBagIcon} title="Marketplace"/>

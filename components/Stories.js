@@ -7,22 +7,22 @@ const stories = [
         profile: "/image/Solar.jpg"
     },
     {
-        name: "Bruh2",
+        name: "Jack",
         src: "/image/Anton.png",
         profile: "/image/Solar.jpg"
     },
     {
-        name: "Bruh3",
+        name: "Mike",
         src: "/image/Anton.png",
         profile: "/image/Solar.jpg"
     },
     {
-        name: "Bruh4",
+        name: "Lisa",
         src: "/image/Anton.png",
         profile: "/image/Solar.jpg"
     },
     {
-        name: "Bruh5",
+        name: "John freeman",
         src: "/image/Anton.png",
         profile: "/image/Solar.jpg"
     },
@@ -32,7 +32,7 @@ const Stories = () => {
     return (
         <div className="flex justify-center space-x-3 mx-auto" >
             {stories.map((data , index) => (
-                <StoryCard name={data.name} src={data.src} profile={data.profile} index={index}  />
+                <StoryCard name={data.name} src={data.src} profile={data.profile} key={index}  />
             ))}
         </div>
     )
