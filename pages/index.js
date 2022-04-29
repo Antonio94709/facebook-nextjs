@@ -6,10 +6,10 @@ import Sidebar from '../components/Sidebar'
 import Feed from '../components/Feed'
 import Widgets from '../components/Widgets'
 import { getSession } from "next-auth/react"
-import Login from '../components/Login'
+
 
 const Home = ({ session }) => {
-  // if(!session) return <Login/>
+  
   return (
     <div>
       <Head>
